@@ -1,4 +1,33 @@
 {% extends 'base.html' %}
+{% block title %} {{title}} {%endblock%}
 {% block content %}
-        <p>esto es paret del INDEXADO</p>
+        {% from "macro.html" import render_field %}
+<div class="container">
+<div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <form name="SentMessage" id="concactForm" method="post">
+                        <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-group controls">
+                                        {{ render_field(form.username) }}
+                                </div>
+                        </div>
+                        <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-group controls">
+                                        {{ render_field(form.edad) }}
+                                </div>
+                        </div>
+                        <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-group controls">
+                                        {{ render_field(form.email) }}
+                                </div>
+                        </div>
+                        <div class="row control-group">
+                                <div class="form-group col-xs-12 floating-label-group controls">
+                                        {{ render_field(form.submit) }}
+                                </div>
+                        </div>
+                </form>
+        </div>
+</div>
+</div>
 {% endblock %}
