@@ -23,8 +23,8 @@ def index():
 
 @app.route('/cookie')
 def cookie():
-    response = 
-    return render_template('cookie.html')
+    response = make_response(render_template('cookie.html'))
+    return response
 
 if __name__ == '__main__':
     app.run (debug=True, port=8003)
